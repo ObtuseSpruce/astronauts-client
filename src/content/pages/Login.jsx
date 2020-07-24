@@ -1,5 +1,6 @@
 // Packages
 import React, { useState, useEffect } from 'react'
+import {Redirect} from 'react-router-dom'
 import Firebase from '../config/Firebase'
 import firebase from 'firebase'
 
@@ -14,6 +15,10 @@ const Login = props => {
                 props.setUser(data.user)
             })
             .catch(error => console.log(error))
+    }
+
+    if(props.user){
+        return <Redirect to='/home' />
     }
 
   return (

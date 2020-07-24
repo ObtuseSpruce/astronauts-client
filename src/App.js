@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router , Route} from 'react-router-dom'
 import './App.css';
-import Login from "./content/pages/Login"
-import Home from "./content/pages/Home"
+import Content from './content/Content'
 
 
 function App() {
@@ -12,16 +11,9 @@ function App() {
     setUser(null)
   }
 
-  const Content = () => {
-  if (!user) {
-    return <Login setUser={setUser} />
-  } else {
-    return <Home handleLogout={handleLogout} />
-  }}
-
   return (
     <Router>
-        <Content />
+        <Content handleLogout={handleLogout} setUser={setUser} user={user} />
     </Router>
   );
 }
