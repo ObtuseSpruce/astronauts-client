@@ -13,7 +13,7 @@ function App() {
 
   return (
     <Router>
-        <Content handleLogout={handleLogout} setUser={setUser} user={user} />
+        <Content handleLogout={handleLogout} setUser={setUser} />
     </Router>
   );
 }

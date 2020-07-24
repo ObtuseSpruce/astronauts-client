@@ -1,17 +1,19 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom'
+import Firebase from "../config/Firebase"
 
 const Home = (props) => {
 
-    if (!props.user) {
+    if (!props.currentUser) {
         return <Redirect to='/' />
+    } else {
+        console.log(props.currentUser)
     }
 
     return(
         <div>
             <h1>Home Stub</h1>
-            <p>welcome {props.user.displayName}</p>
-            <button onClick={props.handleLogout}>Logout</button>
+            <button onClick={ () => Firebase.auth().signOut()}>Logout</button>
         </div>
         
     )

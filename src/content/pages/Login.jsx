@@ -17,7 +17,7 @@ const Login = props => {
             .catch(error => console.log(error))
     }
 
-    if(props.user){
+    if(props.currentUser){
         return <Redirect to='/home' />
     }
 
