@@ -1,6 +1,5 @@
 import firebase from 'firebase'
 
-console.log("heres the key", process.env.REACT_APP_TEST_KEY)
 // set the firebaseConfig to the right keys
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
