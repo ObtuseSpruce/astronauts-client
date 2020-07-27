@@ -9,8 +9,7 @@ import Button from '@material-ui/core/Button'
 const Login = props => {
     const provider = new firebase.auth.GoogleAuthProvider()
     
-    const handleLogin = (e) => {
-        e.preventDefault()
+    const handleLogin = () => {
         Firebase.auth()
             .signInWithPopup(provider)
             .then((data) => {

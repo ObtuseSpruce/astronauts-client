@@ -6,8 +6,6 @@ import Content from './content/Content'
 
 function App() {
 
-  console.log(process.env.REACT_APP_API_KEY)
-
   return (
     <Router>
         <Content />
