@@ -11,7 +11,7 @@ const Login = props => {
     
     const handleLogin = () => {
         Firebase.auth()
-            .signInWithPopup(provider)
+            .signInWithRedirect(provider)
             .then((data) => {
                 props.setUser(data.user)
             })
