@@ -59,7 +59,7 @@ const Astronauts = (props) => {
                 </div>
             </div>
             <div className="astronautInfo">
-                <blockquote>Since the launch of the International Space Station in 1998, 240 individuals have lived and worked on the satalite.</blockquote>
+                <blockquote>Since the launch of the International Space Station in 1998, 240 individuals have lived and worked on the satellite.</blockquote>
             </div>
         </div>
     )

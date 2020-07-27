@@ -45,7 +45,7 @@ const Home = (props) => {
             <Zoom appear={false} direction={"down"} in={!trigger}>
                 <div className="welcomeContainer" >
                     <ShowDisplayName />
-                    <p>Scroll down to learn more about the International Space Station and it's crew.</p>
+                    <p>Scroll down to learn more about the International Space Station and its crew.</p>
                 </div>
             </Zoom>
             </div>

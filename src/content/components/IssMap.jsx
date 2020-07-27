@@ -77,7 +77,7 @@ const IssMap = (props) => {
             </div>
 
             <div className="astronautInfo">
-                <blockquote>The ISS travels at 5 miles a second and completes 16 orbits every day.</blockquote>
+                <blockquote>The ISS travels at 5 miles per second and completes 16 orbits every day.</blockquote>
             </div>
 
         </div>
