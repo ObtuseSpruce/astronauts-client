@@ -8,7 +8,6 @@ const IssMap = (props) => {
     useEffect(() => {
         const abortController = new AbortController();
         const signal = abortController.signal;
-
         const getIssData = () => {
             fetch("http://api.open-notify.org/iss-now", { signal: signal })
                 .then(response => response.json())
@@ -24,11 +23,15 @@ const IssMap = (props) => {
         } else {
             setTimeout(getIssData, 5000)
         }
+        //abortController cancels a fetch request
+        //if the request hangs.
         return function cleanup() {
             abortController.abort();
           };
     }, [issData])
 
+
+    //if there is no iss location data, then lat and lng are set to 0
     if (issData) {
         var lat = issData.latitude
         var lng = issData.longitude
@@ -39,7 +42,8 @@ const IssMap = (props) => {
 
     const position = [lat, lng]
 
-    // customized marker icon for Leaflet
+    //customized marker icon for Leaflet
+    //displays a red iss silhouette
     const myIcon =  L.icon({
         iconUrl: 'https://i.imgur.com/QxRjcbJ.png',
         iconSize: [60, 35],

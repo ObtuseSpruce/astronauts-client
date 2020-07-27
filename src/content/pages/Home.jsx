@@ -11,6 +11,9 @@ import Footer from '../nav/Footer'
 
 const Home = (props) => {
     const [open, setOpen] = useState(false)
+    
+    //the threshold option affects how far down the page
+    //one needs to scroll before triggering the animation
     const trigger = useScrollTrigger({threshold: "240"});
 
     // Protects the route from unauthorized users
@@ -18,6 +21,8 @@ const Home = (props) => {
         return <Redirect to='/' />
     }
     
+    //checks to see if the user has a display name
+    //if not the app welcomes you as a friend.
     const ShowDisplayName = () => {
         if (props.currentUser.displayName) {
             return (
@@ -36,6 +41,7 @@ const Home = (props) => {
             <NavDrawer open={open} setOpen={setOpen} />
 
             <div id="homeTop">
+            {/* material-ui offers many different transitional components such as Fade and Zoom */}
             <Zoom appear={false} direction={"down"} in={!trigger}>
                 <div className="welcomeContainer" >
                     <ShowDisplayName />
@@ -44,16 +50,9 @@ const Home = (props) => {
             </Zoom>
             </div>
             
-            <div>
-                <Astronauts />
-            </div>
-
-            <div>
-                <IssMap />
-            </div>
-
+            <Astronauts />
+            <IssMap />
             <Footer />
-
         </div>
         
     )

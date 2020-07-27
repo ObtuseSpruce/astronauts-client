@@ -8,6 +8,8 @@ import Firebase from './config/Firebase'
 const Content = (props) => {
     const [currentUser, setCurrentUser] = useState(null)
 
+    //Firebase is called to see if there is an authorized user.
+    //If it detects none it sets the currentUser to Null.
     useEffect(() => {
         Firebase.auth().onAuthStateChanged(setCurrentUser)
     }, [])
@@ -15,7 +17,7 @@ const Content = (props) => {
     return(
         <Router>
             <Route exact path="/" render={
-                () => <Login setUser={props.setUser} currentUser={currentUser}/>
+                () => <Login currentUser={currentUser}/>
             } />
             <Route path="/home" render={
                 () => <Home handleLogout={props.handleLogout} currentUser={currentUser} />

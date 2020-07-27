@@ -131,7 +131,7 @@ const NavDrawer = (props) => {
             <a href="#homeTop"><Button className="navButton">Home</Button></a>
             <a href="#astronautsCon"><Button className="navButton">Astronauts</Button></a>
             <a href="#issMapCon"><Button className="navButton"> iss location map</Button></a>
-            <a  className="logoutButton"><Button onClick={ () => Firebase.auth().signOut()} className="navButton">Logout</Button></a>
+            <div className="logoutButton"><Button onClick={ () => Firebase.auth().signOut()} className="navButton">Logout</Button></div>
           </div>
         </Drawer>
       </div>

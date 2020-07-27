@@ -101,7 +101,6 @@ footer {
 
 .navTitle {
   text-align: center;
-  width: 90%
 }
 
 .navBarButtonCon {
@@ -114,6 +113,7 @@ footer {
 }
 .logoutButton {
   margin-top: 60vh;
+  width: 100%;
 }
 
 .welcomeContainer p{
