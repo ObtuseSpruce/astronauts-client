@@ -16,10 +16,10 @@ const Login = props => {
             //Firebase offers several different methods for sign-in
             //This redirects to the provider(google) and then once signed-in
             //redirects back to site
-            .signInWithRedirect(provider)
+            .signInWithPopup(provider)
             .then(() => {
             })
-            .catch(error => console.log(error))
+            .catch(error => console.log('there was a login error', error))
     }
 
     //if there is an authorized user redirect to /home
