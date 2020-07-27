@@ -10,7 +10,7 @@ const Astronauts = (props) => {
 
     //api call to get the api to get data about astronauts
     const getData = () => {
-    fetch(process.env.REACT_APP_ASTROS_KEY)
+    fetch("http://api.open-notify.org/astros")
         .then(response => response.json())
         .then(results => {
             setData(results.people)
