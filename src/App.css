@@ -3,51 +3,154 @@
 body {
   text-align: center;
   background-color: #13293d;
-  color: white;
+  color: #EDF6F9;
+  font-family: 'Exo 2', sans-serif;
+  background-image: url("https://pluspng.com/img-png/galaxy-png-galaxy-png-file-1920.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
 }
  tr{
    color: red;
  }
- .mainBody {
+ .navButton{
+  width: 100%;
+  margin: 100px;
  }
+ a{
+   width: 100%;
+   text-decoration: none;
+   margin-top: 5px;
+ }
+
  .welcomeContainer {
    position: fixed;
    width: 100vw;
    z-index: -1;
    margin-top: 30vh;
  }
-
+.astronautInfo{
+  display: inline-block;
+  width: 30vw;
+  border-bottom: 2px solid #EDF6F9;
+  border-top: 2px solid #EDF6F9;
+  margin: 10vh 0;
+  
+}
 .astronauts {
   width: 100vw;
-  background-color: #13293d;
-  margin-top: 100vh;
+  background: linear-gradient(0deg, rgba(19,41,61,1) 0%, rgba(19,41,61,1) 65%, rgba(19,41,61,0.00043767507002800965) 100%);
+  margin-top: 50vh;
+  padding-top: 50vh;
+
 }
+
+.horizontalLine {
+  width: 80vw;
+  display: inline-block;
+  padding: 5vh 0;
+}
+
 .astronautTable {
-  border: 2px solid red;
+  border: 2px solid #EDF6F9;
   text-align: center;
   display: inline-block;
-  background-color: white;
-  width: auto;
+  background-color: #EDF6F9;
+  width: 20vw;
+}
+
+.astronautsCon{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
 }
 .App {
   text-align: center;
 }
-.mapCon {
-  width: 100vw;
+
+.issMapCon{
   background-color: #13293d;
-  margin: 0, 600px;
-  padding-top: 20vh;
-  margin-bottom: 300px;
+  padding-bottom: 5vh;
 }
-.astronautCon {
-  margin: 0, 600px;
-  padding-top: 20vh;
-  margin-bottom: 300px;
+
+.mapInfo {
+  margin-bottom: 5vh;
 }
+
+.mapInfo p{
+  font-size: 14px;
+}
+
 .mapContainer {
   display: inline-block;
-  border: 4px solid #edf6f9;
+  border: 2px solid #EDF6F9;
   height: 400px;
   width: 600px;
   position: relative;
+}
+
+footer {
+  background-color: #2a628f;
+}
+
+.toolBar{
+  background-color: #2a628f;
+}
+
+.navTitle {
+  text-align: center;
+  width: 90%
+}
+
+.navBarButtonCon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logoutButton {
+  margin-top: 60vh;
+}
+
+.welcomeContainer p{
+  margin-top: 5vh;
+}
+
+.googleSignIn{
+  height: 20px;
+}
+.googleSignIn:Hover{
+  display: block;
+  opacity: .8;
+}
+
+.loginContainer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15%;
+  width: auto;
+}
+.loginButton{
+  width: auto;
+  display: block;
+}
+.loginContainer a{
+color: white;
+}
+.customButton{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 0 5px;
+  border-radius: 15px 15px;
+}
+
+.customButton p{
+  padding-left: 4px;
 }

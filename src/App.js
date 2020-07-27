@@ -5,15 +5,10 @@ import Content from './content/Content'
 
 
 function App() {
-  const [user, setUser] = useState(null)
-
-  const handleLogout = () => {
-    setUser(null)
-  }
 
   return (
     <Router>
-        <Content handleLogout={handleLogout} setUser={setUser} />
+        <Content />
     </Router>
   );
 }

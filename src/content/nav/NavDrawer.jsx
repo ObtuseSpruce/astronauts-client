@@ -4,13 +4,13 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Drawer from '@material-ui/core/Drawer';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import clsx from 'clsx';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Divider from '@material-ui/core/Divider';
+import Firebase from "../config/Firebase"
 
 
 
@@ -89,13 +89,13 @@ const NavDrawer = (props) => {
 
 
     return(
-        <div className={classes.root}>
+      <div className={classes.root} id="navBarCon">
         <AppBar
             position="fixed"
             className={clsx(classes.appBar, {
             [classes.appBarShift]: props.open,
             })} >
-            <Toolbar>
+            <Toolbar className="toolBar">
                 <IconButton
                     color="inherit"
                     aria-label="open drawer"
@@ -105,9 +105,11 @@ const NavDrawer = (props) => {
                 >
                     <MenuIcon />
                 </IconButton>
-                <Typography variant="h6" noWrap>
-                    Persistent drawer
-                </Typography>
+                <div className="navTitle">
+                  <h3>
+                      International Space Station Tracker
+                  </h3>
+                </div>
             </Toolbar>
         </AppBar>
         <Drawer
@@ -125,10 +127,14 @@ const NavDrawer = (props) => {
           </IconButton>
         </div>
         <Divider />
-            <a href="#astronautsCon">Astronauts</a>
-            <a href="#leafletMap"> iss location map</a>
+          <div className="navBarButtonCon">
+            <a href="#homeTop"><Button className="navButton">Home</Button></a>
+            <a href="#astronautsCon"><Button className="navButton">Astronauts</Button></a>
+            <a href="#issMapCon"><Button className="navButton"> iss location map</Button></a>
+            <a  className="logoutButton"><Button onClick={ () => Firebase.auth().signOut()} className="navButton">Logout</Button></a>
+          </div>
         </Drawer>
-        </div>
+      </div>
     )
 }
 
