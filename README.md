@@ -11,3 +11,15 @@ Fork and clone the repo and then add the appropriate firebase keys to Firebase.j
 Make sure to ```npm install``` on the base folder to install all necessary modules.
 
 Run ```npm start``` and it should be good to go.
+
+
+### Features:
+
+This app contains a live map of the ISS orbit projected on a map of the Earth. This map is powered by Leaflet.
+
+#### Tech:
+
+React-App
+Firebase
+Leaflet
+Material-UI
