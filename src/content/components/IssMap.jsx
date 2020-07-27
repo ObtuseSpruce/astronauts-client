@@ -10,7 +10,7 @@ const IssMap = (props) => {
         const signal = abortController.signal;
 
         const getIssData = () => {
-            fetch(process.env.REACT_APP_ISS_KEY, { signal: signal })
+            fetch("http://api.open-notify.org/iss-now", { signal: signal })
                 .then(response => response.json())
                 .then(results => {
                     setIssData(results.iss_position)
