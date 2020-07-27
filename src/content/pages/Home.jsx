@@ -17,14 +17,6 @@ const Home = (props) => {
     if (!props.currentUser) {
         return <Redirect to='/' />
     }
-
-   const handleDrawerOpen = () => {
-       if(open == false) {
-           setOpen(true)
-       } else {
-           setOpen(false)
-       }
-   }
     
     const ShowDisplayName = () => {
         if (props.currentUser.displayName) {
