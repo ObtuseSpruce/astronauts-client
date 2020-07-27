@@ -1,6 +1,6 @@
 ## International Space Station Tracker
 
-This web app features Firebase user Authentication and utilizes the open-notify api.
+Track the ISS as it orbits the earth and learn about the crewmembers aboard the satellite!
 
 ### How to Use:
 This app requires a Firebase account and project. If you do not have a project setup please do so now.
