@@ -7,7 +7,7 @@ body {
   font-family: 'Exo 2', sans-serif;
   background-image: url("https://pluspng.com/img-png/galaxy-png-galaxy-png-file-1920.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: stretch;
   background-attachment: fixed;
 }
  tr{
